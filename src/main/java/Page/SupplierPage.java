@@ -21,7 +21,8 @@ public class SupplierPage extends PageBase{
     private String successmsg=".swal2-html-container";
 
     public void addsupplier(String name_ar,String name_en,String add1,String phone1,String status1) throws InterruptedException {
-//       clickButton(datatab);
+        clickButton(home);
+       clickButton(datatab);
         clickButton(supplier);
         Thread.sleep(1000);
         clickbtn(addsupp);

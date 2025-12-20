@@ -19,8 +19,9 @@ public class BranchPage extends PageBase{
     private String successmsg=".swal2-html-container";
 
     public void addbranch(String names ,String regions) throws InterruptedException {
-//        clickButton(datatab);
 
+        clickButton(home);
+        clickButton(datatab);
         clickButton(branch);
         Thread.sleep(1000);
         clickbtn(addbranch);

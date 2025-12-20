@@ -13,6 +13,8 @@ public class PageBase {
         this.page = page;
     }
 
+    protected String home="//mat-icon[@data-mat-icon-name='home']";
+
     public void wait_for_element(String element, int time){
         page.waitForSelector(element, new Page.WaitForSelectorOptions()
                 .setState(WaitForSelectorState.VISIBLE)

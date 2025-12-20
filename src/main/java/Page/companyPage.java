@@ -8,6 +8,7 @@ public class companyPage extends PageBase{
         super(page);
     }
 
+
     private String datatab="text=البيانات الاساسية";
     private String companypage="//span[normalize-space()='الشركات']";
     private String addcompany="إضافة شركة";
@@ -30,7 +31,8 @@ public class companyPage extends PageBase{
             ,String codes,String Type,String Fileuploadcode,String statuss
             ,String curr,String cat , String disc
     ) throws InterruptedException {
-//        clickButton(datatab);
+        clickButton(home);
+        clickButton(datatab);
         clickButton(companypage);
         Thread.sleep(1000);
         clickbtn(addcompany);

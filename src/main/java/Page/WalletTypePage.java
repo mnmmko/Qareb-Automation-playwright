@@ -20,7 +20,7 @@ public class WalletTypePage extends PageBase{
     private String successmsg=".swal2-html-container";
 
     public void Addwallet(String name_ar,String name_en,String descriptions) throws InterruptedException {
-
+        clickButton(home);
         clickButton(datatab);
         clickButton(walletType);
         Thread.sleep(1000);

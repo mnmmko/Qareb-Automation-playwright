@@ -9,7 +9,8 @@ public class cardCategoryPage extends PageBase{
     }
 
     private String datatab="text=البيانات الاساسية";
-    private String addcard="إضافة فئة";
+    private String cardpage="//span[normalize-space()='فئات الشركات']";
+    private String addcard="إضاف";
     private String nameofcard="//input[@formcontrolname='description']";
     private String amount="//input[@formcontrolname='amount']";
     private String company="//input[@formcontrolname='company']";
@@ -26,6 +27,10 @@ public class cardCategoryPage extends PageBase{
     public void addcard(String name,String amt,String companys,
                         String prices,String foriegnprices,String alert_1,
                         String alert_2,String alert_3) throws InterruptedException {
+                    clickButton(home);
+                    clickButton(datatab);
+                    clickButton(cardpage);
+                    Thread.sleep(1000);
                     clickbtn(addcard);
                     Thread.sleep(1000);
                     sendText(nameofcard,name);

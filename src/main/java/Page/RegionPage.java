@@ -21,7 +21,8 @@ public class RegionPage extends PageBase{
 
     public void addregion(String name_ar,String name_en,String region_type) throws InterruptedException {
 
-//        clickButton(datatab);
+        clickButton(home);
+        clickButton(datatab);
         clickButton(region);
         Thread.sleep(1000);
         clickbtn(addregion);

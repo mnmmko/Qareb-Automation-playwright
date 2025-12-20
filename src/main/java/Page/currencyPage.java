@@ -22,8 +22,8 @@ public class currencyPage extends PageBase{
     private String successmsg=".swal2-html-container";
 
     public void add_currency(String name_ar,String name_en,String symbols,String fractions) throws InterruptedException {
-
-//        clickButton(datatab);
+        clickButton(home);
+        clickButton(datatab);
         clickButton(currency);
         Thread.sleep(1000);
         clickbtn(addacurrency);

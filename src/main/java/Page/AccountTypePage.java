@@ -20,6 +20,7 @@ public class AccountTypePage extends PageBase{
 
     public void addaccunttype(String name_ar,String name_en,String desc) throws InterruptedException {
 
+        clickButton(home);
         clickButton(accountType);
         Thread.sleep(1000);
         clickbtn(addaccount);
