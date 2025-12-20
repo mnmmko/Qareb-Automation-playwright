@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ECommerece" verbose="1" >
+    <parameter name="browser" value="chrome"/>
+    <test name="base" preserve-order="true">
+        <classes>
+<!--            <class name="Test.BaseTest"></class>-->
+
+            <class name="Test.LoginTest"></class>
+            <class name="Test.companyCategoryTest"></class>
+            <class name="Test.CompanyTest"></class>
+            <class name="Test.CardCategoryTest"></class>
+            <class name="Test.AccountTypeTest"></class>
+            <class name="Test.CurrencyTest"></class>
+            <class name="Test.RegionTest"></class>
+            <class name="Test.BranchTest"></class>
+            <class name="Test.WalletTypeTest"></class>
+            <class name="Test.SupplierTest"></class>
+            <!--            <class name="Test.TransferTest"></class>-->
+        </classes>
+
+    </test>
+
+    <test name="register-cucmber">
+        <classes>
+
+        </classes>
+
+    </test><!-- Test -->
+
+
+</suite> <!-- Suite -->
