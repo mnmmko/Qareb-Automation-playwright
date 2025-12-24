@@ -2,35 +2,31 @@ package Page;
 
 import Excel.ExcelUtil;
 import com.microsoft.playwright.Page;
-import org.apache.poi.ss.formula.functions.T;
 
 import java.awt.*;
-import java.awt.datatransfer.StringSelection;
-import java.awt.event.KeyEvent;
-import java.io.File;
 import java.io.IOException;
 
-
-public class UploadcardFilePage extends PageBase {
-    public UploadcardFilePage(Page page) {
+public class uploadcardPage extends PageBase{
+    public uploadcardPage(Page page) {
         super(page);
     }
 
-    File excelFile;
-
     private String datatab = "text=المخزون الجديد";
-    private String uploadcardfile = "//span[normalize-space()='رفع ملف كروت']";
+    private String uploadcardfile = "//span[normalize-space()='رفع محتوي كرت']";
     private String company = "//input[@placeholder='ابحث عن شركة...']";
     private String cards = "//mat-select[@formcontrolname='cardCategoryId']";
+    private String uploadcarddata = "//textarea[@formcontrolname='cards']";
     private String arrowcards="Escape";
     private String selectitems = "mat-option";
     private String supplier = "//input[@placeholder='ابحث عن مورد...']";
     private String date = "//input[@formcontrolname='expiryDate']";
     private String discount = "//input[@formcontrolname='discount']";
     private String exchangeRate = "//input[@formcontrolname='exchangeRate']";
-    private String autoserial="//input[@type='checkbox']";
-    private String notes="//textarea";
-    private String uploadfiles="//div[@class='upload-file']";
+
+
+    private String notes="//textarea[@formcontrolname='note']";
+
+    private String extradelmeter = "//input[@formcontrolname='extraDelimiter']";
     private  String saveButton = "حفظ";
 
     private String selectcode="(//mat-select)[2]";
@@ -38,10 +34,12 @@ public class UploadcardFilePage extends PageBase {
     private String uploadconfirm="مراجعة وتأكيد";
     private String confirmup="تأكيد";
 
-    public void addfile(String companynames,String cardss,String supp,String dates,String discounts,String exchangerates,String notess) throws InterruptedException, AWTException, IOException {
+    public void addcard(String companynames,String cardss,String delameter,
+                        String supp,String dates,String discounts,
+                        String exchangerates,String notess) throws InterruptedException, AWTException, IOException {
 
         clickButton(home);
-        excelFile = ExcelUtil.createExcelFile(cardss);
+
         clickButton(datatab);
         clickButton(uploadcardfile);
         sendText(company,companynames);
@@ -56,21 +54,24 @@ public class UploadcardFilePage extends PageBase {
         Thread.sleep(500);
         keypoardclick(arrowcards);
         Thread.sleep(500);
+        sendText(uploadcarddata,getcards(cardss,delameter));
+        Thread.sleep(1000);
         sendText(supplier,supp);
         Thread.sleep(1000);
+        clickButton(supplier);
         chosselist(selectitems,supp);
-        Thread.sleep(500);
+        Thread.sleep(1000);
         sendText(date,dates);
         sendText(discount,discounts);
         sendText(exchangeRate,exchangerates);
-        clickButton(autoserial);
+
         sendText(notes,notess);
-        clickButton(uploadfiles);
-        Thread.sleep(1000);
-        addfiles(excelFile.getAbsolutePath().toString());
+
+
         Thread.sleep(1000);
         clickbtn(saveButton);
         Thread.sleep(1000);
+
         clickButton(selectcode);
         chosselist(selectitems,"Code");
         Thread.sleep(1000);
@@ -87,8 +88,11 @@ public class UploadcardFilePage extends PageBase {
 
     }
 
-
-
-
-
+    public String getcards(String amount,String delametar){
+        String upload="";
+        for(int i=1;i<=10;i++){
+            upload+=random12Digits()+delametar+amount+"\n";
+        }
+        return upload;
+    }
 }

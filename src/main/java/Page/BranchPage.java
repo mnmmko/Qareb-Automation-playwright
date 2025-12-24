@@ -25,7 +25,7 @@ public class BranchPage extends PageBase{
         clickButton(branch);
         Thread.sleep(2000);
         clickbtn(addbranch);
-        Thread.sleep(1000);
+        Thread.sleep(1500);
         sendText(name,names);
         sendText(region,regions);
         chosselist(selectregion,regions);

@@ -18,6 +18,7 @@
             <class name="Test.SupplierTest"></class>
             <class name="Test.PaymentcollectorTest"></class>
             <class name="Test.UploadcardfileTest"></class>
+            <class name="Test.UploadcardTest"></class>
                         <class name="Test.TransferTest"></class>
         </classes>
 

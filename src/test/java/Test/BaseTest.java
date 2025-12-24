@@ -19,6 +19,7 @@ import Page.SupplierPage;
 import Page.PaymentColletorPage;
 import Page.UploadcardFilePage;
 import Page.TransferRequestPage;
+import Page.uploadcardPage;
 
 public class BaseTest {
 
@@ -42,6 +43,7 @@ public class BaseTest {
     static PaymentColletorPage pcp;
     static UploadcardFilePage ucfp;
     static TransferRequestPage tr;
+    static uploadcardPage ucp;
     static String cardamt=ran2Digits();
     static String branchname="branch"+ran3Digits();
     static String supplier="مورد" + ran3Digits();
@@ -128,5 +130,14 @@ public class BaseTest {
         return "09" + String.format("%08d", number);
     }
 
+    public static String random12Digits() {
+        Random random = new Random();
+        StringBuilder sb = new StringBuilder();
+
+        for (int i = 0; i < 12; i++) {
+            sb.append(random.nextInt(10)); // رقم من 0 إلى 9
+        }
+        return sb.toString();
+    }
 
 }

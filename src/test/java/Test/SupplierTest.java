@@ -1,7 +1,7 @@
 package Test;
 
 import Page.SupplierPage;
-
+import Page.WalletTypePage;
 import org.testng.annotations.Test;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
