@@ -24,7 +24,7 @@ public class ExcelUtil {
         header.createCell(1).setCellValue("Amount");
 
         // Data
-        for (int i = 1; i <= 5; i++) {
+        for (int i = 1; i <= 500; i++) {
         Row row1 = sheet.createRow(i);
         row1.createCell(0).setCellValue(random12Digits());
         row1.createCell(1).setCellValue(amount);

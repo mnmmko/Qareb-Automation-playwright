@@ -32,6 +32,12 @@ public class uploadcardPage extends PageBase{
     private String selectcode="(//mat-select)[2]";
     private String selectamount="(//mat-select)[3]";
     private String uploadconfirm="مراجعة وتأكيد";
+
+    private String penddinguploads="text=الملفات المعلقة";
+    private String sortopt="//span[contains(normalize-space(.), 'رقم العملية')]";
+    private String showpenddingrequest="(//i[@title='عرض' and normalize-space()='visibility'])[1]";
+
+
     private String confirmup="تأكيد";
 
     public void addcard(String companynames,String cardss,String delameter,
@@ -82,6 +88,12 @@ public class uploadcardPage extends PageBase{
         Thread.sleep(1000);
         clickbtn(confirmup);
         Thread.sleep(1000);
+
+        clickButton(penddinguploads);
+        clickButton(sortopt);
+        Thread.sleep(1000);
+        clickButton(showpenddingrequest);
+
         clickbtn(confirmup);
         Thread.sleep(2000);
 
@@ -90,7 +102,7 @@ public class uploadcardPage extends PageBase{
 
     public String getcards(String amount,String delametar){
         String upload="";
-        for(int i=1;i<=10;i++){
+        for(int i=1;i<=500;i++){
             upload+=random12Digits()+delametar+amount+"\n";
         }
         return upload;
