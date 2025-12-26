@@ -53,9 +53,11 @@ public class BaseTest {
     @BeforeSuite
     @Parameters({"browser"})
     public void open(String browserName) {
-
-        url = "http://138.199.218.4:8080/auth/login";
-
+        if(System.getenv("url")==null) {
+            url = "http://138.199.218.4:8080/auth/login";
+        }else {
+            url=System.getenv("url");
+        }
         playwright = Playwright.create();
 
         BrowserType.LaunchOptions launchOptions =
