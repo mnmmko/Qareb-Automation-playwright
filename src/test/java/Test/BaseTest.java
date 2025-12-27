@@ -56,7 +56,7 @@ public class BaseTest {
     @BeforeSuite
     @Parameters({"browser"})
     public void open(String browserName) {
-        
+
         if(System.getenv("url")==null) {
             url = "http://138.199.218.4:8080/auth/login";
             user = "mnabeh1";
@@ -64,7 +64,7 @@ public class BaseTest {
         }else {
             url=System.getenv("url");
             user=System.getenv("username");
-            pass=System.getenv("password");
+            pass=System.getenv("password").toString();
         }
         playwright = Playwright.create();
 
