@@ -37,9 +37,7 @@ public class UploadcardFilePage extends PageBase {
     private String selectamount="(//mat-select)[3]";
     private String uploadconfirm="مراجعة وتأكيد";
 
-    private String penddinguploads="text=الملفات المعلقة";
-    private String sortopt="//span[contains(normalize-space(.), 'رقم العملية')]";
-    private String showpenddingrequest="(//i[@title='عرض' and normalize-space()='visibility'])[1]";
+
 
     private String confirmup="تأكيد";
 
@@ -88,20 +86,6 @@ public class UploadcardFilePage extends PageBase {
         Thread.sleep(1000);
 
     }
-    public void accept_upload() throws InterruptedException {
-        clickButton(home);
-        clickButton(datatab);
-        clickButton(penddinguploads);
-        clickButton(sortopt);
-        Thread.sleep(1000);
-        clickButton(showpenddingrequest);
-
-        clickbtn(confirmup);
-        Thread.sleep(2000);
-
-    }
-
-
 
 
 }

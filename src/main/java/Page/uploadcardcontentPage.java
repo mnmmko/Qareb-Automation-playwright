@@ -1,13 +1,12 @@
 package Page;
 
-import Excel.ExcelUtil;
 import com.microsoft.playwright.Page;
 
 import java.awt.*;
 import java.io.IOException;
 
-public class uploadcardPage extends PageBase{
-    public uploadcardPage(Page page) {
+public class uploadcardcontentPage extends PageBase{
+    public uploadcardcontentPage(Page page) {
         super(page);
     }
 
@@ -33,9 +32,7 @@ public class uploadcardPage extends PageBase{
     private String selectamount="(//mat-select)[3]";
     private String uploadconfirm="مراجعة وتأكيد";
 
-    private String penddinguploads="text=الملفات المعلقة";
-    private String sortopt="//span[contains(normalize-space(.), 'رقم العملية')]";
-    private String showpenddingrequest="(//i[@title='عرض' and normalize-space()='visibility'])[1]";
+
 
 
     private String confirmup="تأكيد";
@@ -93,18 +90,7 @@ public class uploadcardPage extends PageBase{
 
     }
 
-    public void accept_upload() throws InterruptedException {
-        clickButton(home);
-        clickButton(datatab);
-        clickButton(penddinguploads);
-        clickButton(sortopt);
-        Thread.sleep(1000);
-        clickButton(showpenddingrequest);
 
-        clickbtn(confirmup);
-        Thread.sleep(2000);
-
-    }
 
     public String getcards(String amount,String delametar){
         String upload="";

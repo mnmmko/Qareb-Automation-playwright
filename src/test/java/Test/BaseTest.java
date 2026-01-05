@@ -19,7 +19,8 @@ import Page.SupplierPage;
 import Page.PaymentColletorPage;
 import Page.UploadcardFilePage;
 import Page.TransferRequestPage;
-import Page.uploadcardPage;
+import Page.uploadcardcontentPage;
+import Page.uploadedcardsPage;
 
 public class BaseTest {
 
@@ -48,7 +49,8 @@ public class BaseTest {
     static PaymentColletorPage pcp;
     static UploadcardFilePage ucfp;
     static TransferRequestPage tr;
-    static uploadcardPage ucp;
+    static uploadcardcontentPage ucp;
+    static uploadedcardsPage udcp;
 
     static String branchname="branch"+ran3Digits();
     static String supplier="مورد" + ran3Digits();
