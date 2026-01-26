@@ -12,7 +12,7 @@ public class BranchPage extends PageBase{
     private String branch="//span[normalize-space()='تعريف الفروع']";
     private String addbranch="إضافة";
     private String name="//input[@formcontrolname='name']";
-    private String region="//input[@formcontrolname='اختر المنطقة']";
+    private String region="//app-entity-autocomplete[@formcontrolname='region']//input";
     private String selectregion="mat-option";
     private String active="//input[@type='checkbox']";
     private final String saveButton = "حفظ";
