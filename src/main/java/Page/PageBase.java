@@ -100,11 +100,14 @@ public class PageBase {
     }
 
     //==========click btn with name===========
-    public void clickbtns(String selector) {
+    public void clickbtnexact(String selector) {
         page.getByRole(
-                AriaRole.MENUITEM,
-                new Page.GetByRoleOptions().setName(selector)
+                AriaRole.LINK,
+                new Page.GetByRoleOptions()
+                        .setName(selector)
+                        .setExact(true)
         ).click();
+
     }
 
     //==============choose drop dwon list================

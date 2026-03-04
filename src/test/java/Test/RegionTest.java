@@ -7,11 +7,11 @@ import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertTha
 
 public class RegionTest extends BaseTest{
 
-    @Test(priority = 6)
+    @Test(priority = 7)
     public void addRegionTest() throws InterruptedException {
         rp=new RegionPage(page);
 
-        rp.addregion(regionname,"region"+ran2Digits(),"بلد");
+        rp.addregion(regionname,"region"+ran2Digits(),branchname,"منطقة");
 //        assertThat(rp.getsuccmsg()).containsText("تم حفظ المنطقة بنجاح");
     }
 }

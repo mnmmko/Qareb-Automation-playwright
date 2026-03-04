@@ -12,14 +12,15 @@
             <class name="Test.CardCategoryTest"></class>
             <class name="Test.AccountTypeTest"></class>
             <class name="Test.CurrencyTest"></class>
-            <class name="Test.RegionTest"></class>
             <class name="Test.BranchTest"></class>
+            <class name="Test.RegionTest"></class>
             <class name="Test.WalletTypeTest"></class>
             <class name="Test.SupplierTest"></class>
             <class name="Test.PaymentcollectorTest"></class>
             <class name="Test.UploadcardfileTest"></class>
             <class name="Test.UploadcardcontentTest"></class>
-                        <class name="Test.TransferTest"></class>
+            <class name="Test.TransferTest"></class>
+            <class name="Test.PenddingTransferTest"></class>
         </classes>
 
     </test>

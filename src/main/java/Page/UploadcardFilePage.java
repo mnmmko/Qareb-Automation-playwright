@@ -33,8 +33,8 @@ public class UploadcardFilePage extends PageBase {
     private String uploadfiles="//div[@class='upload-file']";
     private  String saveButton = "حفظ";
 
-    private String selectcode="(//mat-select)[2]";
-    private String selectamount="(//mat-select)[3]";
+    private String selectcode="(//mat-select)[1]";
+    private String selectamount="(//mat-select)[2]";
     private String uploadconfirm="مراجعة وتأكيد";
 
 

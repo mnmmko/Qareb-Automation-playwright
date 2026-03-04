@@ -18,8 +18,8 @@ public class companyPage extends PageBase{
     private  String type="//input[@formcontrolname='type']";
     private  String fileUploadcard ="//input[@formcontrolname='fileUploadCode']";
     private  String status="(//mat-select)[1]";
-    private String currency="(//mat-select)[2]";
-    private String category="(//mat-select)[3]";
+    private String currency="//input[@placeholder='ابحث عن العملة']";
+    private String category="//input[@placeholder='ابحث عن التصنيف']";
     private  String droplist="mat-option span.mdc-list-item__primary-text";
     private String discount="//input[@formcontrolname='discount']";
     private String MNO="//input[@type='checkbox']";

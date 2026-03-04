@@ -13,7 +13,7 @@ public class cardCategoryPage extends PageBase{
     private String addcard="إضاف";
     private String nameofcard="//input[@formcontrolname='description']";
     private String amount="//input[@formcontrolname='amount']";
-    private String company="//input[@formcontrolname='company']";
+    private String company="(//input)[3]";
     private String selectcamp="mat-option";
     private String price="//input[@formcontrolname='price']";
     private String foriegnprice="//input[@formcontrolname='priceForForeignCurrency']";

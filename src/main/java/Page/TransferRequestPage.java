@@ -15,25 +15,30 @@ public class TransferRequestPage extends PageBase {
             "text=المالية";
 
     private final String transfer =
-            "text=التحويلات";
+            "التحويلات";
 
     private final String addTransfer =
             "إضافة تحويل";
 
     private final String accountFromInput =
-            "(//input[contains(@class,'mat-mdc-autocomplete-trigger')])[1]";
+            "(//input[@formcontrolname='name'])[1]";
+
+    private String search="البحث";
+
+    private String selectaccountfrom="(//input[@type='checkbox'])[1]";
+    private String selectaccountto="(//input[@type='checkbox'])[2]";
 
     private final String accountToInput =
-            "(//input[contains(@class,'mat-mdc-autocomplete-trigger')])[2]";
+            "(//input[@formcontrolname='name'])[2]";
 
-    private final String selectItem =
-            "mat-option";
 
     private final String amount =
             "//input[@formcontrolname='amount']";
 
     private final String narration =
             "textarea";
+
+    private String date="//input[@formcontrolname='transferDate']";
 
     private final String saveButton =
             "حفظ";
@@ -47,32 +52,38 @@ public class TransferRequestPage extends PageBase {
 
         clickButton(home);
         clickButton(mov);
-        clickButton(transfer);
+        clickbtnexact(transfer);
     }
 
     public void makeTransfer(
             String accountFrom,
             String accountTo,
             String amt,
-            String narr
+            String narr,
+            String dates
     ) throws InterruptedException {
 
         clickbtn(addTransfer);
-        clickButton(accountFromInput);
+        Thread.sleep(1000);
+
         sendText(accountFromInput, accountFrom);
         Thread.sleep(1000);
-        chosselist(selectItem,accountFrom);
+        clickbtn(search);
+        Thread.sleep(1000);
+        clickButton(selectaccountfrom);
+        Thread.sleep(1000);
 
-
-        clickButton(accountToInput);
         sendText(accountToInput, accountTo);
         Thread.sleep(1000);
-        chosselist(selectItem,accountTo);
+        clickbtn(search);
         Thread.sleep(1000);
+        clickButton(selectaccountto);
+        Thread.sleep(1000);
+
         sendText(narration, narr);
         sendText(amount, amt);
         Thread.sleep(500);
-
+        sendText(date, dates);
         clickbtn(saveButton);
 
         waitInvisibleElement(alertSuccess);

@@ -21,6 +21,7 @@ import Page.UploadcardFilePage;
 import Page.TransferRequestPage;
 import Page.uploadcardcontentPage;
 import Page.uploadedcardsPage;
+import Page.penddingTransferPage;
 
 public class BaseTest {
 
@@ -51,6 +52,7 @@ public class BaseTest {
     static TransferRequestPage tr;
     static uploadcardcontentPage ucp;
     static uploadedcardsPage udcp;
+    static penddingTransferPage ptp;
 
     static String branchname="branch"+ran3Digits();
     static String supplier="مورد" + ran3Digits();

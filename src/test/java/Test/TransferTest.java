@@ -38,7 +38,7 @@ public class TransferTest extends BaseTest {
                 "مجدالدين جمال الحوات مندوب",
                 "5",
                 "أسامة ابراهيم ابولجام مندوب" + " ارسل تحويل الى " + "مجدالدين جمال الحوات مندوب"
-        );
+                        ,"2026/01/11" );
     }
 
     @DataProvider(name = "transfer", parallel=false)
