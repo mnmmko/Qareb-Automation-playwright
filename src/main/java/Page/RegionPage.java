@@ -16,10 +16,12 @@ public class RegionPage extends PageBase{
     private  String regiontype="//mat-label[text()='نوع المنطقة']";
     private String selecttype="mat-option";
     private String active="//input[@type='checkbox']";
+    private String branch= "(//input)[3]";
+    private String selectbranch = "mat-option";
     private  String saveButton = "حفظ";
     private String successmsg=".swal2-html-container";
 
-    public void addregion(String name_ar,String name_en,String region_type) throws InterruptedException {
+    public void addregion(String name_ar,String name_en,String branchs,String region_type) throws InterruptedException {
 
         clickButton(home);
         clickButton(datatab);
@@ -31,6 +33,8 @@ public class RegionPage extends PageBase{
         sendText(nameen,name_en);
         clickButton(regiontype);
         chosselist(selecttype,region_type);
+        sendText(branch,branchs);
+        clickButton(selectbranch);
         clickbtn(saveButton);
         Thread.sleep(1000);
 

@@ -7,10 +7,10 @@ import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertTha
 
 public class BranchTest extends BaseTest{
 
-    @Test(priority = 7)
+    @Test(priority = 6)
     public void addbranchtest() throws InterruptedException {
         bp=new BranchPage(page);
-        bp.addbranch(branchname,regionname);
+        bp.addbranch(branchname);
 //        assertThat(bp.getsuccmsg()).containsText("تم حفظ الفرع بنجاح");
     }
 
