@@ -29,7 +29,7 @@ public class BranchPage extends PageBase{
         sendText(name,names);
 //        sendText(region,regions);
 //        chosselist(selectregion,regions);
-//        clickButton(active);
+///        clickButton(active);
         clickbtn(saveButton);
         Thread.sleep(1000);
 
