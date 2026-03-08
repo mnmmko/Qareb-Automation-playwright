@@ -34,7 +34,7 @@ public class RegionPage extends PageBase{
         clickButton(regiontype);
         chosselist(selecttype,region_type);
         sendText(branch,branchs);
-        chosselist(selectbranch,branchs);
+        clickButton(selectbranch);
         clickbtn(saveButton);
         Thread.sleep(1000);
 

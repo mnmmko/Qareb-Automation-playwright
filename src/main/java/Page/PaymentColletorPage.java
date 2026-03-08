@@ -17,7 +17,7 @@ public class PaymentColletorPage extends PageBase{
     private String precntageofsale="//input[@formcontrolname='percentageOfSales']";
     private String region="//input[@formcontrolname='region']";
     private String selecttype="mat-option";
-    private String barnch="//input[@formcontrolname='branch']";
+    private String branch="//input[@formcontrolname='branch']";
     private String address="//input[@formcontrolname='address']";
     private final String saveButton = "حفظ";
     private String successmsg=".swal2-html-container";
@@ -31,13 +31,17 @@ public class PaymentColletorPage extends PageBase{
         clickbtn(addcoolector);
         clickButton(arrpw);
         sendText(precntageofsale,precntage);
+        clearText(branch);
+
+        sendText(branch,branchs);
+        chosselist(branch,branchs);
+        Thread.sleep(1000);
         clearText(region);
         sendText(region,regions);
+        chosselist(region,regions);
         Thread.sleep(1000);
         chosselist(selecttype,regions);
-        clearText(barnch);
-        sendText(barnch,branchs);
-        Thread.sleep(1000);
+
         chosselist(selecttype,branchs);
         sendText(address,address1);
         Thread.sleep(1000);
