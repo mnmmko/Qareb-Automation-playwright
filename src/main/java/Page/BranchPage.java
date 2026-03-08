@@ -12,13 +12,13 @@ public class BranchPage extends PageBase{
     private String branch="//span[normalize-space()='تعريف الفروع']";
     private String addbranch="إضافة";
     private String name="//input[@formcontrolname='name']";
-//    private String region="//app-entity-autocomplete[@formcontrolname='region']//input";
+//    private String region="//input[@formcontrolname='region']";
 //    private String selectregion="mat-option";
 //    private String active="//input[@type='checkbox']";
     private final String saveButton = "حفظ";
     private String successmsg=".swal2-html-container";
 
-    public void addbranch(String names) throws InterruptedException {
+    public void addbranch(String names ,String regions) throws InterruptedException {
 
         clickButton(home);
         clickButton(datatab);
