@@ -31,8 +31,8 @@ public class PaymentColletorPage extends PageBase{
         clickbtn(addcoolector);
         clickButton(arrpw);
         sendText(precntageofsale,precntage);
-        clearText(barnch);
-        sendText(barnch,branchs);
+        clearText(branch);
+        sendText(branch,branchs);
         Thread.sleep(1000);
         chosselist(selecttype,branchs);
         Thread.sleep(1000);
