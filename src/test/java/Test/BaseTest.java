@@ -54,7 +54,7 @@ public class BaseTest {
     static uploadedcardsPage udcp;
     static penddingTransferPage ptp;
 
-    static String branchname="branch"+ran3Digits();
+    static String branchname="فرع"+ran3Digits();
     static String supplier="مورد" + ran3Digits();
 
     @BeforeSuite
@@ -63,8 +63,8 @@ public class BaseTest {
 
         if(System.getenv("url")==null) {
             url = "http://138.199.218.4:8080/auth/login";
-            user = "mnabeh1";
-            pass="12345678";
+            user = "mnabeh2";
+            pass="123456";
         }else {
             url=System.getenv("url");
             user=System.getenv("username");
