@@ -17,7 +17,7 @@ public class PaymentColletorPage extends PageBase{
     private String precntageofsale="//input[@formcontrolname='percentageOfSales']";
     private String region="//input[@placeholder='ابحث عن منطقة']";
     private String selecttype="mat-option";
-    private String barnch="//input[@formcontrolname='branch']";
+    private String branch="//input[@formcontrolname='branch']";
     private String address="//input[@formcontrolname='address']";
     private final String saveButton = "حفظ";
     private String successmsg=".swal2-html-container";
