@@ -12,10 +12,7 @@ public class uploadedcardsPage extends PageBase{
     private String sortopt="//span[contains(normalize-space(.), 'رقم العملية')]";
     private String showpenddingrequest="(//i[@title='عرض' and normalize-space()='visibility'])[1]";
     private String confirmup="تأكيد";
-    private String select_status="(//mat-select)[3]";
-    private String selectitems = "mat-option";
-    private String secconfirmup="تأكيد";
-    public void accept_upload(String status) throws InterruptedException {
+    public void accept_upload() throws InterruptedException {
         clickButton(home);
         clickButton(datatab);
         clickButton(penddinguploads);
@@ -24,9 +21,6 @@ public class uploadedcardsPage extends PageBase{
         clickButton(showpenddingrequest);
 
         clickbtn(confirmup);
-        clickButton(select_status);
-        chosselist(selectitems,status);
-        clickbtn(secconfirmup);
         Thread.sleep(2000);
 
     }

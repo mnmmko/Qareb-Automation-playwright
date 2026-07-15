@@ -14,7 +14,7 @@ public class UploadcardcontentTest extends BaseTest {
         ucp=new uploadcardcontentPage(page);
         udcp=new uploadedcardsPage(page);
         ucp.addcard( campname,cardamt,",","دجون", "2026/10/11","0.02","1","upload file");
-        udcp.accept_upload("تفعيل البطاقات تلقائيًا");
+        udcp.accept_upload();
 
     }
 }
